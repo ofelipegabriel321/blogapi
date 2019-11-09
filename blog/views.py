@@ -213,17 +213,12 @@ class ProfilePostsAndCommentsList(APIView):
 class EndpointsList(APIView):
 
     def get(self, request, format=None):
-        root_url = 'http://localhost:8000/'
+        root_url = 'http://ofelipegabriel321.pythonanywhere.com//'
         data = {
                 'jsonimporter': root_url + 'jsonimporter/',
                 'profiles-list': root_url + 'profiles',
-                'profiles-detail': root_url + 'profiles/<int:pk>',
                 'profile-posts-list': root_url + 'profile-posts',
-                'profile-posts-detail': root_url + 'profile-posts/<int:pk>',
                 'posts-comments-list': root_url + 'posts-comments',
-                'posts-comments-detail': root_url + 'posts-comments/<int:pk>',
-                'comment-list': root_url + 'posts/<int:pk>/comments',
-                'comment-detail': root_url + 'posts/<int:post_pk>/comments/<int:comment_pk>',
                 'profile-posts-and-comments-list': root_url + 'profile-posts-and-comments'
         }
         
